@@ -1,15 +1,19 @@
+import trainService from '../services/TrainService.js';
+
 class TrainController {
-	async createTrain(req, res) {
+	async createTrain (req, res) {
 		try {
-			res.send('новый поезд создан');
+			const train = await trainService.createTrain(req.body);
+			return res.json(train);
 		} catch (e) {
 			console.log(e);
 		}
 	}
 
-	async allTrains(req, res) {
+	async allTrains (req, res) {
 		try {
-			res.send('все поезда');
+			const trains = await trainService.allTrains(req.query);
+			return res.json(trains);
 		} catch (e) {
 			console.log(e);
 		}
