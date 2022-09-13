@@ -1,9 +1,8 @@
 import {Router} from 'express';
+import trainRouter from "./trainRouter.js";
 
 const router = Router();
 
-router.get('/train', (req, res) => {
-	res.send('роут с поездами');
-})
+router.use('/', trainRouter);
 
 export default router;
