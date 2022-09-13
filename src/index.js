@@ -3,12 +3,14 @@ import express from "express";
 import cors from "cors";
 import bodyParser from 'body-parser';
 import {AppDataSource} from "./db.js";
+import router from "./router/appRouter.js";
 
 const app = express();
 const PORT = process.env.PORT || 9001;
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use('/api', router);
 
 const start = async () => {
 	try {
