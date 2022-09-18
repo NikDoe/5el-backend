@@ -28,10 +28,10 @@ export default new EntitySchema({
 			type : 'time'
 		},
 		seat         : {
-			type : 'int'
+			type : 'text'
 		},
 		van          : {
-			type : 'int'
+			type : 'text'
 		},
 		price        : {
 			type : 'real'

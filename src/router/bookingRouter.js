@@ -1,13 +1,9 @@
 import { Router } from 'express';
+import BookingController from '../controllers/BookingController.js';
 
 const bookingRouter = Router();
 
-bookingRouter.get('/booking', (req, res) => {
-	res.send('все брони получены');
-});
-
-bookingRouter.post('/booking', (req, res) => {
-	res.send('создана новая бронь');
-});
+bookingRouter.get('/booking', BookingController.getAllBookings);
+bookingRouter.post('/booking', BookingController.createBooking);
 
 export default bookingRouter;
