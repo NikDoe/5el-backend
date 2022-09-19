@@ -9,9 +9,6 @@ export default new EntitySchema({
 			type: 'int',
 			generated: true,
 		},
-		title: {
-			type: 'varchar',
-		},
 		from: {
 			type: 'text',
 		},
