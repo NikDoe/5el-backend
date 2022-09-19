@@ -1,10 +1,14 @@
+import bookingService from '../services/BookingService.js';
+
 class BookingController {
-	async createBooking (req, res) {
-		res.send('создана новая бронь');
+	async createBooking(req, res) {
+		const booking = await bookingService.createBooking(req.body);
+		return res.json(booking);
 	}
 
-	async getAllBookings (req, res) {
-		res.send('все брони получены');
+	async getAllBookings(req, res) {
+		const bookings = await bookingService.getAllBookings();
+		return res.json(bookings);
 	}
 }
 
