@@ -1,4 +1,4 @@
-import {EntitySchema} from 'typeorm';
+import { EntitySchema } from 'typeorm';
 
 export default new EntitySchema({
 	name: 'Booking',
@@ -7,43 +7,43 @@ export default new EntitySchema({
 		id: {
 			primary: true,
 			type: 'int',
-			generated: true
+			generated: true,
 		},
 		title: {
-			type: 'varchar'
+			type: 'varchar',
 		},
 		from: {
-			type: 'text'
+			type: 'text',
 		},
 		to: {
-			type: 'text'
+			type: 'text',
 		},
 		depTime: {
-			type: 'time'
+			type: 'time',
 		},
 		arrivalTime: {
-			type: 'time'
+			type: 'time',
 		},
 		inTheWay: {
-			type: 'time'
+			type: 'time',
 		},
 		seat: {
-			type: 'text'
+			type: 'text',
 		},
 		van: {
-			type: 'text'
+			type: 'text',
 		},
 		price: {
-			type: 'real'
+			type: 'real',
 		},
 		fio: {
-			type: 'text'
+			type: 'text',
 		},
 		passportData: {
-			type: 'text'
+			type: 'text',
 		},
 		phone: {
-			type: 'text'
-		}
-	}
+			type: 'text',
+		},
+	},
 });
