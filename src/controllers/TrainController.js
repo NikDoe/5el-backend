@@ -21,8 +21,8 @@ class TrainController {
 
 	async getOneTrain(req, res) {
 		try {
-			const train = await trainService.getOneTrain(req.params);
-			res.json(train);
+			const OneTrain = await trainService.getOneTrain(req.params);
+			res.json(OneTrain);
 		} catch (e) {
 			console.log(e);
 		}

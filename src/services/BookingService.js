@@ -1,4 +1,4 @@
-import {bookingRepo} from '../utils/utils.js';
+import { bookingRepo } from '../utils/utils.js';
 
 class BookingService {
 	async createBooking(booking) {
@@ -10,6 +10,11 @@ class BookingService {
 	async getAllBookings() {
 		const allBookings = bookingRepo.find();
 		return allBookings;
+	}
+
+	async getOneBooking({ id }) {
+		const booking = await bookingRepo.findOne({ where: { id } });
+		return booking;
 	}
 }
 
